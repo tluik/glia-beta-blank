@@ -5,21 +5,6 @@
   <meta charset="utf-8">
   <title>Hello World Glia</title>
 
-  <script>
-    window.getGliaContext = function() {
-      function extractQueryParamValueFromString(paramName, urlString) {
-        var regex = new RegExp("[?|&]" + paramName + "=([^&]*)");
-        var executedRegex = urlString.match(regex);
-        return !executedRegex ? null : executedRegex[1];
-      }
-
-      var queryParamName = "external_session_id";
-
-      return {
-        sessionId: extractQueryParamValueFromString(queryParamName, window.location.href)
-      };
-    };
-  </script>
   	<script>
 		//Read idtoken from query parameter with the same name.
 		const params = new Proxy(new URLSearchParams(window.location.search), {
