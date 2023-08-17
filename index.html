@@ -11,6 +11,7 @@
 		get: (searchParams, prop) => searchParams.get(prop),
 	});
 	const idToken = params.idtoken;
+	  console.log(idToken);
 	window.getGliaContext = () => ({ idToken })
   </script>
 <script async src="https://api.beta.glia.com/salemove_integration.js"></script>
